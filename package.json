@@ -1,0 +1,16 @@
+{
+  "name": "flowdock-wikipedia-bot",
+  "version": "1.0.0",
+  "description": "The bot searches Wikipedia articles and display the first hundreds of characters in Flowdock.",
+  "main": "main.js",
+  "dependencies": {
+    "flowdock": "^0.9.0",
+    "wikijs": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
