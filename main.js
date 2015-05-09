@@ -21,10 +21,12 @@ session.flows(function(err, flows) {
       if (query[0] == CODE) {
         query.shift();
         query = query.toString().replace(/,/g, ' ');
-        wiki.page(query).then(function(page) {
-          page.content().then(function(content) {
-            var output = content.substring(0,400)+'...';
-            session.comment(message.flow, message.id, output);
+        wiki.search(query).then(function(data) {
+          wiki.page(data.results[0]).then(function(page) {
+            page.content().then(function(content) {
+              var output = content.substring(0,400)+'...';
+              console.log(output);
+            });
           });
         });
       }
