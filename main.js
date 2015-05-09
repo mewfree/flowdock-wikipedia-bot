@@ -25,7 +25,7 @@ session.flows(function(err, flows) {
           wiki.page(data.results[0]).then(function(page) {
             page.content().then(function(content) {
               var output = content.substring(0,400)+'...';
-              console.log(output);
+              session.comment(message.flow, message.id, output);
             });
           });
         });
